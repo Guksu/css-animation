@@ -13,6 +13,12 @@ export default function Home() {
       >
         scroll
       </li>
+      <li
+        className="cursor-pointer text-blue-500 hover:text-blue-700"
+        onClick={() => router.push("/mouse")}
+      >
+        mouse
+      </li>
     </ul>
   );
 }

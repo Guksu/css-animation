@@ -7,6 +7,12 @@
   --foreground: #171717;
 }
 
+@layer components {
+  .firework {
+    @apply absolute w-2.5 h-2.5 border-2 border-dotted border-red-500 rounded-full opacity-0;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
