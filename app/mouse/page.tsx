@@ -2,7 +2,7 @@
 import { clsx } from "clsx";
 import { useState, useEffect } from "react";
 
-export default function MouseTrail() {
+export default function MouseAni() {
   const [dot, setDot] = useState<{ id: number; x: number; y: number }[]>([]);
   const [burst, setBurst] = useState<boolean>(false);
   const [burstPosition, setBurstPosition] = useState<{

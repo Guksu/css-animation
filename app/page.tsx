@@ -4,21 +4,28 @@ import { useRouter } from "next/navigation";
 
 export default function Home() {
   const router = useRouter();
+  const path = [
+    {
+      title: "scroll",
+      path: "/scroll",
+    },
+    {
+      title: "mouse",
+      path: "/mouse",
+    },
+  ];
 
   return (
     <ul className="list-none p-0 m-0">
-      <li
-        className="cursor-pointer text-blue-500 hover:text-blue-700"
-        onClick={() => router.push("/scroll")}
-      >
-        scroll
-      </li>
-      <li
-        className="cursor-pointer text-blue-500 hover:text-blue-700"
-        onClick={() => router.push("/mouse")}
-      >
-        mouse
-      </li>
+      {path.map((item, index) => (
+        <li
+          key={index}
+          className="cursor-pointer text-blue-500 hover:text-blue-700"
+          onClick={() => router.push(item.path)}
+        >
+          {item.title}
+        </li>
+      ))}
     </ul>
   );
 }
