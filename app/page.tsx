@@ -13,6 +13,10 @@ export default function Home() {
       title: "mouse",
       path: "/mouse",
     },
+    {
+      title: "menu",
+      path: "/menu",
+    },
   ];
 
   return (
